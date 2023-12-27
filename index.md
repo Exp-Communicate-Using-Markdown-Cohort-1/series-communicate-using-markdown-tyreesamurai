@@ -11,3 +11,19 @@
 ###### H6: x.x
 
 ![funny image about internet explorer being slow](https://atlascorps.org/wp-content/uploads/2013/08/funny-internet-browsers.jpg)
+
+
+```
+{
+    init: function(elevators, floors) {
+        var elevator = elevators[0]; // Let's use the first elevator
+
+        // Whenever the elevator is idle (has no more queued destinations) ...
+        elevator.on("idle", function() {
+            // let's go to all the floors (or did we forget one?)
+            elevator.goToFloor(0);
+            elevator.goToFloor(1);
+        });
+    },
+}
+```
